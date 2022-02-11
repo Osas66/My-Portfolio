@@ -31,9 +31,13 @@ function Body() {
                         <div className='nav-links'>
                             <nav>
                                 <ul style={toggleStyle()}>
+                                    { /* eslint-disable */}
                                     <li><a onClick={() => { handleClick(); window.location.href = '/#' }}>Home</a></li>
+                                    { /* eslint-disable */}
                                     <li><a onClick={() => { handleClick(); window.location.href = '/#about' }}>About</a></li>
+                                    { /* eslint-disable */}
                                     <li><a onClick={() => { handleClick(); window.location.href = '/#services' }} >Services</a></li>
+                                    { /* eslint-disable */}
                                     <li><a onClick={() => { handleClick(); window.location.href = '/#contacts' }}>Contact</a></li>
                                 </ul>
                             </nav>
