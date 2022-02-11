@@ -1,38 +1,419 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+}
+:root{
+--white:white;
+--blue:#1E90FF;
+--dark-violet:hsl(257, 27%, 26%);
+--red:hsl(0, 87%, 67%);
+--gray:hsl(0, 1%, 71%);
+--grayish-violet:hsl(260, 30%, 96%);
+--dim-gray:#696969;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height:1.4;
+  position: relative;
+}
+header {
+  background: url("./image/background.jpg");
+  color:var(--white);
+  height: 700px;
+  position: relative;
+  margin-top: -180px;
+}
+.nav-bar {
+  display: flex;
+  background:#000000;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  border:2px solid none;
+  position:fixed;
+  top:0px;
+  z-index: 2;
+}
+.nav-links{
+  margin-right: 170px;
+}
+.nav-links ul {
+  display: flex;
+  gap:20%;
+  list-style: none;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-links ul li a:active {
+  color: var(--blue);
+}
+.nav-links ul li a:hover {
+  color:var(--dim-gray);
+  cursor: pointer;
+}
+.menu-bar {
+  display: none;
+}
+.text-area{
+  padding:250px;
   text-align: center;
+  font-size: 30px;
+  font-weight:bold;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.introduction-div {
+  display: flex;
+  padding:80px 20px;
+  background-color: var(--grayish-violet);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.introduction {
+  width:40%;
+  padding: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.introduction h1{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.experience {
+  width:30%
+}
+.experience h4 {
+  margin:10px 0 10px 0;
+  color:var(--blue)
+}
+.services {
+  margin: 40px 70px;
+  align-items: center;
+}
+.services-writing {
+  padding: 70px 120px;
+  text-align: center;
+  font-size: 18px;
+}
+.services-writing h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.boxes{
+  display: flex;
+}
+.box1, .box2, .box3 {
+  padding:30px;
+  width:50%;
+  border: 1px solid var(--gray);
+  margin:20px
+}
+.box1 h3, .box2 h3, .box3 h3 {
+  margin:25px 0px;
+  font-size: 25px;
+}
+.skills {
+  display: flex;
+  margin-top: 80px;
+}
+.skills img {
+  width:600px;
+  height:700px
+}
+.skills-and-tools {
+  background: var(--grayish-violet);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 100px;
+  margin-bottom: 5px;
+}
+.skills-and-tools h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.skills-and-tools h3 {
+  font-weight: bold;
+  font-size: 25px;
+}
+.icons ul {
+  display: flex;
+  list-style: none;
+  gap:50px;
+}
+.projects {
+  margin: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.projects h1 {
+  margin-bottom: 40px;
+  align-self: center;
+  text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.joblist, .url, .weight {
+  display: flex;
+  flex-direction: column;
+}
+.joblist p, .url p, .weight p{
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.joblist img, .url img {
+  max-width:100%;
+  transition: .2s;
+}
+.weight{
+  margin-left: -700px;
+}
+.weight img {
+  height:700px;
+  transition: .2s;
+}
+.joblist img:hover, .url img:hover, .weight img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  z-index: -1;
+}
+.weight button {
+  width: 35%;
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  padding: 19px 36px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 40px;
+  border: none;
+}
+.joblist button, .url button{
+  margin:20px 0;
+  width: 20%;
+  position: relative;
+  padding: 19px 36px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 40px;
+  border: none;
+ }
+ 
+ .joblist button span, .url button span, .weight button span{
+  position: relative;
+  color: #fff;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 1;
+ }
+ 
+ .joblist button .liquid, .url button .liquid, .weight button .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+ }
+ 
+ .joblist button .liquid::after,
+ .joblist button .liquid::before, .url button .liquid::after, .url button .liquid::before, 
+ .weight button .liquid::after, .weight button .liquid::before{
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #fff;
+ }
+ 
+ .joblist button .liquid::before, .url button .liquid::before,
+ .weight button .liquid::before{
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+ }
+ 
+ .joblist button .liquid::after, .url button .liquid::after,
+ .weight button .liquid::after{
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+ }
+ 
+ .joblist button:hover .liquid,.url button:hover .liquid,
+ .weight button:hover .liquid {
+  top: -120px;
+  cursor: pointer;
+ }
+ 
+ @keyframes animate {
+  0% {
+   transform: translate(-50%, -75%) rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+ 
+  100% {
+   transform: translate(-50%, -75%) rotate(360deg);
+  }
+ }
+ .contact {
+  background: var(--grayish-violet);
+  padding: 50px;
+ }
+ .contact span {
+   text-decoration: underline;
+ }
+ .contact span:hover {
+   color: var(--blue);
+   cursor: pointer;
+ }
+.footer-div {
+  background: #000000;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:60px;
+  gap:30px
+}
+.socials ul{
+  color:var(--white);
+  list-style: none;
+  display: flex;
+  gap:20%;
+  margin-right: 70px;
+}
+.copyright {
+  font-size: 20px;
+}
+.socials ul li {
+  background: var(--blue);
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+.socials ul li:hover{
+  cursor: pointer;
+  background:var(--white);
+  color:var(--blue)
+}
+
+@media (max-width:420px) {
+  .menu-bar{
+    display: block;
+  float: right;
+  margin-right: -150px;
+  }
+  .menu-bar:hover {
+    cursor: pointer;
+  }
+  .nav-links ul {
+    background:#000000;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+    gap:5%;
+    top:70px;
+    right:-100%;
+    transition: all 1s;
+  }
+  .text-area {
+    padding: 100px;
+    padding-top: 250px;
+    font-size: 20px;
+  }
+  .introduction-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .introduction {
+    width:100%;
+    font-size:18px;
+  }
+  .experience {
+    width:100%;
+  }
+  .services {
+    margin-left:10px;
+    margin-right: 10px;
+  }
+  .services-writing {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .services-writing h3 {
+    font-size: 30px;
+  }
+  .boxes{
+    display: flex;
+    flex-direction: column;
+  }
+  .box1, .box2, .box3 {
+    padding:30px;
+    width:90%;
+    border: 1px solid var(--gray);
+    margin:20px
+  }
+  .skills{
+    flex-direction: column;
+  }
+  .skills img {
+    width:100%;
+  }
+  .skills-and-tools {
+    margin-top:-20px;
+    padding: 50px;
+    margin-bottom: 5px;
+  }
+  .skills-and-tools h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .skills-and-tools h3 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  .icons ul {
+    display: flex;
+    list-style: none;
+    gap:30px;
+    margin-top: 40px;
+  }
+  .projects {
+    margin: 50px;
+  }
+  .joblist img, .url img {
+    width: 100%;
+  }
+  .weight{
+    margin-left: 10px;
+    align-self: flex-start;
+  }
+  .weight img {
+    height:400px
+  }
+  .joblist p, .url p, .weight p{
+    font-size: 18px;
+  }
+  .joblist button, .url button {
+    width:40%
+  }
+  .weight button {
+    text-align: center;
+    width:60%;
+    margin-top: 30px;
   }
 }
