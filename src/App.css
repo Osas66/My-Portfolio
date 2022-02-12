@@ -22,7 +22,7 @@ body {
 header {
   background: url("./image/background.jpg");
   color:var(--white);
-  height: 700px;
+  height: 750px;
   position: relative;
   margin-top: -180px;
 }
@@ -63,6 +63,7 @@ header {
 }
 .text-area{
   padding:250px;
+  padding-bottom: 400px;
   text-align: center;
   font-size: 30px;
   font-weight:bold;

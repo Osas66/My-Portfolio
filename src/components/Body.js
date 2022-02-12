@@ -53,7 +53,7 @@ function Body() {
                     <div className='introduction-div'>
                         <div className='introduction'>
                             <h1>Hi there i'm Victor,</h1>
-                            <p>and I love to create and I love to create beautiful and efficient websites for my customers. I am font-end-developer with knowledge of Javascript,HTML,CSS, Tailwind css and React to create beautiful and well responsive websites.</p>
+                            <p>and I love to create beautiful and efficient websites for my customers. I am a font-end-developer with knowledge of Javascript,HTML,CSS, Tailwind css and React to create beautiful and well responsive websites.</p>
                         </div>
                         <div className='experience'>
                             <h4>2018-present</h4>
