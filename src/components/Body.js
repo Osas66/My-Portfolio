@@ -58,7 +58,7 @@ function Body() {
                         <div className='experience'>
                             <h4>2018-present</h4>
                             <strong><p>Education</p></strong>
-                            <p>I am currently a student of computer engineering(UNIBEN)</p>
+                            <p>University of Benin, Nigeria - B.Eng, Computer Engineering.</p>
                             <h4>2020-present</h4>
                             <strong> <p>freelance web developer</p></strong>
                             <p>I have been able to aid some customers to bring their business online</p>
