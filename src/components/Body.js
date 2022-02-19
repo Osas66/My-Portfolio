@@ -22,7 +22,7 @@ function Body() {
     }
     return (
         <div>
-            <div>
+            <div className='entire-container'>
                 <header>
                     <div className='nav-bar'>
                         <div>
