@@ -17,9 +17,6 @@ function Body() {
             right: toggle && '0'
         }
     }
-    const getCopy = () => {
-        navigator.clipboard.writeText("Vicaremy@gmail.com")
-    }
     return (
         <div>
             <div className='entire-container'>
@@ -77,7 +74,7 @@ function Body() {
                     <div className='services'>
                         <div className='services-writing'>
                             <h3>Offered Services</h3>
-                            <p>Web design and development have been my bread and butter for more than 5 years. During that time I've discovered that I can help startups and companies with the following services</p>
+                            <p>Web design and development have been my bread and butter for more than 3 years. During that time I've discovered that I can help startups and companies with the following services</p>
                         </div>
                         <div className='boxes'>
                             <div className='box1'>
@@ -129,33 +126,33 @@ function Body() {
                             <h1>My Projects</h1>
                         </div>
                         <div className='joblist'>
-                            <p>Completed a challenge from Front-end mentor called Job-listing</p>
+                            <p>Completed a challenge from Front-end mentor called Job-listing,using REACT useState hooks and flexbox</p>
                             <img src={Joblist} alt='Joblist' />
                             <button onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = 'https://joblisting-challenge.vercel.app/';
+                                window.open('https://joblisting-challenge.vercel.app/');
                             }}>
                                 <span>Visit</span>
                                 <div className='liquid'></div>
                             </button>
                         </div>
                         <div className='url'>
-                            <p>Completed a challenge from Front-end mentor called URL_shortener</p>
+                            <p>Completed a challenge from Front-end mentor called URL_shortener,using REACT, useState,useRef and useEffect hooks and flexbox</p>
                             <div><img src={Url} alt='Url' /></div>
                             <button onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = 'https://sylar-url-shortener.vercel.app/';
+                                window.open('https://sylar-url-shortener.vercel.app/');
                             }}>
                                 <span>Visit</span>
                                 <div className='liquid'></div>
                             </button>
                         </div>
                         <div className='weight'>
-                            <p>A weight converter</p>
+                            <p>A weight converter, built basically on HTML, CSS and vanillajs using DOM and DOM manipulations</p>
                             <img src={Weight} alt='weight' />
                             <button onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = 'https://sylarweightconverter.netlify.app/';
+                                window.open('https://sylarweightconverter.netlify.app/');
                             }}>
                                 <span>Visit</span>
                                 <div className='liquid'></div>
@@ -166,7 +163,7 @@ function Body() {
                 <section id="contacts" >
                     <div className='contact'>
                         <h1>Contact Details</h1>
-                        <p>For any type of online project please don't hesistate to get in touch with me. The fastest way is to send a message to my email<span onClick={() => { getCopy(); }}> Vicaremy@gmail.com </span></p>
+                        <p>For any type of online project please don't hesistate to get in touch with me. The fastest way is to send a message to my email<span><a href='mailto:vicaremy@gmail.com'> Vicaremy@gmail.com </a></span></p>
                     </div>
                 </section>
             </div>
