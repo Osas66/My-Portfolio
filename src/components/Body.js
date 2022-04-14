@@ -3,6 +3,8 @@ import personal from '../image/mypersonal.JPG';
 import Joblist from '../image/joblist.png';
 import Url from '../image/url shortener.png';
 import Weight from '../image/weight.png';
+import tracker from '../image/Ip tracker.png';
+import comment from '../image/Interactive comment.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGem, faCode, faMobileAlt, faDesktopAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faCss3Alt, faJs, faReact, faHtml5 } from '@fortawesome/free-brands-svg-icons';
@@ -126,8 +128,8 @@ function Body() {
                             <h1>My Projects</h1>
                         </div>
                         <div className='joblist'>
-                            <p>Completed a challenge from Front-end mentor called Job-listing,using REACT useState hooks and flexbox</p>
-                            <img src={Joblist} alt='Joblist' />
+                            <p>Completed a challenge from Front-end mentor called Job-listing,using React useState hooks and flexbox. You are able to view available different job openings. whenever you click on a role, level, language and tools it is able to display Jobs based on whatever you clicked.</p>
+                            <div className='project-img-div'><img src={Joblist} alt='Joblist' /></div>
                             <button onClick={(e) => {
                                 e.preventDefault();
                                 window.open('https://joblisting-challenge.vercel.app/');
@@ -137,8 +139,8 @@ function Body() {
                             </button>
                         </div>
                         <div className='url'>
-                            <p>Completed a challenge from Front-end mentor called URL_shortener,using REACT, useState,useRef and useEffect hooks and flexbox</p>
-                            <div><img src={Url} alt='Url' /></div>
+                            <p>Completed a challenge from Front-end mentor called URL_shortener,using React, useState,useRef and useEffect hooks and flexbox. This lets you shorten any URL link.</p>
+                            <div className='project-img-div'><img src={Url} alt='Url' /></div>
                             <button onClick={(e) => {
                                 e.preventDefault();
                                 window.open('https://sylar-url-shortener.vercel.app/');
@@ -148,11 +150,33 @@ function Body() {
                             </button>
                         </div>
                         <div className='weight'>
-                            <p>A weight converter, built basically on HTML, CSS and vanillajs using DOM and DOM manipulations</p>
-                            <img src={Weight} alt='weight' />
+                            <p>A weight converter, built basically on HTML, CSS and vanillajs using DOM and DOM manipulations. You are able to convert several unit to kg, pounds, grams, tons and kilotonnes</p>
+                            <div className='project-img-div'><img src={Weight} alt='weight' /></div>
                             <button onClick={(e) => {
                                 e.preventDefault();
                                 window.open('https://sylarweightconverter.netlify.app/');
+                            }}>
+                                <span>Visit</span>
+                                <div className='liquid'></div>
+                            </button>
+                        </div>
+                        <div className='tracker'>
+                            <p>Inspired by front-end mentor. I have been able to build this using React and react hooks, CSS and flexbox.On page load it gets your current location along with the IP address. You can get any location once you search with the IP or domain name.</p>
+                            <div className='project-img-div'><img src={tracker} alt='tracker' /></div>
+                            <button onClick={(e) => {
+                                e.preventDefault();
+                                window.open('https://sylar-iptracker.vercel.app/');
+                            }}>
+                                <span>Visit</span>
+                                <div className='liquid'></div>
+                            </button>
+                        </div>
+                        <div className='comment'>
+                            <p>This was built using React and its hooks alongside TailwindCSS. This is platform where you can reply an already avaialble comment and also input your own comments.</p>
+                            <div className='project-img-div'><img src={comment} alt='comment' /></div>
+                            <button onClick={(e) => {
+                                e.preventDefault();
+                                window.open('https://interactive-comment-section-three.vercel.app/');
                             }}>
                                 <span>Visit</span>
                                 <div className='liquid'></div>
