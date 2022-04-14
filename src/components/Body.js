@@ -6,7 +6,7 @@ import Weight from '../image/weight.png';
 import tracker from '../image/Ip tracker.png';
 import comment from '../image/Interactive comment.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGem, faCode, faMobileAlt, faDesktopAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faGem, faCode, faMobileAlt, faDesktopAlt, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faCss3Alt, faJs, faReact, faHtml5 } from '@fortawesome/free-brands-svg-icons';
 function Body() {
     const [toggle, setToggle] = useState(false);
@@ -40,7 +40,7 @@ function Body() {
                                     <li><a onClick={() => { handleClick(); window.location.href = '/#contacts' }}>Contact</a></li>
                                 </ul>
                             </nav>
-                            <label className='menu-bar' onClick={() => { handleClick() }}><FontAwesomeIcon icon={faBars} size="2x" /></label>
+                            <label className='menu-bar' onClick={() => { handleClick() }}>{toggle ? <FontAwesomeIcon icon={faTimes} size="2x" /> : <FontAwesomeIcon icon={faBars} size="2x" />}</label>
                         </div>
 
                     </div>

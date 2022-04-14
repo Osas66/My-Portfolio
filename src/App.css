@@ -446,15 +446,16 @@ header {
     position: fixed;
     height: 100%;
     width: 100%;
-    gap: 0%;
     padding-top: 20px;
     top: 66px;
     right: -100%;
     transition: all 1s;
+    margin-right: 0;
   }
 
   .nav-links ul li {
     margin-bottom: 10%;
+    margin-left: 10%;
   }
 
   .text-area {
