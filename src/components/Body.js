@@ -176,7 +176,7 @@ function Body() {
                             <div className='project-img-div'><img src={comment} alt='comment' /></div>
                             <button onClick={(e) => {
                                 e.preventDefault();
-                                window.open('https://interactive-comment-section-three.vercel.app/');
+                                window.open('https://interactive-comment-section-sage.vercel.app/');
                             }}>
                                 <span>Visit</span>
                                 <div className='liquid'></div>
