@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import personal from '../image/mypersonal.JPG';
+import personal from '../image/undraw_problem_solving_re_4gq3.svg';
 import Joblist from '../image/joblist.png';
 import Url from '../image/url shortener.png';
 import Weight from '../image/weight.png';
@@ -7,7 +7,7 @@ import tracker from '../image/Ip tracker.png';
 import comment from '../image/Interactive comment.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGem, faCode, faMobileAlt, faDesktopAlt, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faCss3Alt, faJs, faReact, faHtml5 } from '@fortawesome/free-brands-svg-icons';
+import { faCss3Alt, faJs, faReact, faHtml5, faSass } from '@fortawesome/free-brands-svg-icons';
 function Body() {
     const [toggle, setToggle] = useState(false);
 
@@ -35,7 +35,7 @@ function Body() {
                                     { /* eslint-disable */}
                                     <li><a onClick={() => { handleClick(); window.location.href = '/#about' }}>About</a></li>
                                     { /* eslint-disable */}
-                                    <li><a onClick={() => { handleClick(); window.location.href = '/#services' }} >Services</a></li>
+                                    <li><a onClick={() => { handleClick(); window.location.href = '/#skillsets' }} >Skillset</a></li>
                                     { /* eslint-disable */}
                                     <li><a onClick={() => { handleClick(); window.location.href = '/#contacts' }}>Contact</a></li>
                                 </ul>
@@ -45,14 +45,14 @@ function Body() {
 
                     </div>
                     <div className='text-area'>
-                        <h1>I LOVE TO CREATE BEAUTIFUL AND EFFICIENT WEBSITES</h1><span> <FontAwesomeIcon icon={faDesktopAlt} size="3x" /></span>
+                        <h1>I LOVE TO CREATE BEAUTIFUL AND EFFICIENT WEB APPLICATIONS</h1><span className='desktop-text'> <FontAwesomeIcon icon={faDesktopAlt} size="3x" /></span>
                     </div>
                 </header>
                 <section id="about">
                     <div className='introduction-div'>
                         <div className='introduction'>
                             <h1>Hi there i'm Victor,</h1>
-                            <p>and I love to create beautiful and efficient websites for my customers. I am a font-end-developer with knowledge of Javascript,HTML,CSS, Tailwind css and React to create beautiful and well responsive websites.</p>
+                            <p>and I love to create beautiful and efficient websites and web application. I am a font-end-developer with knowledge of Javascript,HTML,CSS, Tailwind css and React to create beautiful and well responsive websites.</p>
                         </div>
                         <div className='experience'>
                             <h4>2018-present</h4>
@@ -60,22 +60,22 @@ function Body() {
                             <p>University of Benin, Nigeria - B.Eng, Computer Engineering.</p>
                             <h4>2020-present</h4>
                             <strong> <p>freelance web developer</p></strong>
-                            <p>I have been able to aid some customers to bring their business online</p>
+                            <p>I have been able to aid some customers to solve different problems with their business and technology</p>
                         </div>
                         <div className='experience'>
                             <h4>2019-present</h4>
                             <strong><p>Personal projects</p></strong>
-                            <p>I have personally been able to build projects for my leisure</p>
+                            <p>During my spare time, I was able to build side projects using html css and javascript, hereby improving my skills.</p>
                             <h4>2021-present</h4>
                             <strong><p>Community</p></strong>
-                            <p>I am currently enlightening people why they should have their businesses online and the benefits that come with it</p>
+                            <p>I am currently coming up with ideas using my knowledge on technology to build apps that will help solve the community problem.</p>
                         </div>
                     </div>
                 </section>
-                <section id="services">
+                <section id="skillsets">
                     <div className='services'>
                         <div className='services-writing'>
-                            <h3>Offered Services</h3>
+                            <h3>Here are my skillsets</h3>
                             <p>Web design and development have been my bread and butter for more than 3 years. During that time I've discovered that I can help startups and companies with the following services</p>
                         </div>
                         <div className='boxes'>
@@ -105,7 +105,7 @@ function Body() {
                         <div className='skills-and-tools'>
                             <div>
                                 <h1>Why work with me</h1>
-                                <p>I am a great communicator and love to invest necessary time to understand the customer very well</p>
+                                <p>I am a great communicator and love to invest necessary time to understand instructions very well</p>
                             </div>
                             <div>
                                 <h3>Development skills</h3>
@@ -117,6 +117,7 @@ function Body() {
                                     <li style={{ color: '#FFA500' }}><FontAwesomeIcon icon={faHtml5} size='4x' /></li>
                                     <li style={{ color: '#00BFFF' }}><FontAwesomeIcon icon={faReact} size='4x' /></li>
                                     <li style={{ color: '#FFD700' }}><FontAwesomeIcon icon={faJs} size='4x' /></li>
+                                    <li style={{ color: '#FFB6C1' }}><FontAwesomeIcon icon={faSass} size='4x' /></li>
                                 </ul>
                             </div>
                         </div>

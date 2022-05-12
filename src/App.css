@@ -32,9 +32,13 @@ body {
 header {
   background: url("./image/background.jpg");
   color: var(--white);
-  height: 750px;
+  height: 800px;
   position: relative;
   margin-top: -180px;
+}
+
+.desktop-text {
+  margin-top: 500px;
 }
 
 .nav-bar {
@@ -427,7 +431,7 @@ header {
 
 @media (max-width:420px) {
   header {
-    height: 800px;
+    height: 700px;
   }
 
   .menu-bar {
@@ -462,8 +466,9 @@ header {
     padding: 100px;
     padding-top: 300px;
     padding-bottom: 500px;
-    font-size: 20px;
+    font-size: 15px;
   }
+
 
   .introduction-div {
     flex-direction: column;
@@ -508,10 +513,12 @@ header {
   }
 
   .skills {
+    margin-top: 30px;
     flex-direction: column;
   }
 
   .skills img {
+    height: 400px;
     width: 100%;
   }
 
@@ -534,12 +541,14 @@ header {
 
   .icons ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .icons ul li {
-    margin-right: 15px;
+    margin-right: 14px;
+    margin-top: 25px;
   }
 
   .projects {
