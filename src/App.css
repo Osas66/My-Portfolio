@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 :root {
   --white: white;
-  --blue: #1E90FF;
+  --blue: #1e90ff;
   --dark-violet: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
   --gray: hsl(0, 1%, 71%);
   --grayish-violet: hsl(260, 30%, 96%);
   --dim-gray: #696969;
+  --bg-modal: #4b536280;
 }
 
 body {
@@ -30,7 +30,8 @@ body {
 }
 
 header {
-  background: url("./image/background.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./image/osas-bg.jpeg");
   color: var(--white);
   height: 800px;
   position: relative;
@@ -62,7 +63,7 @@ header {
 .nav-links ul {
   display: flex;
   list-style: none;
-  margin-right: 10%
+  margin-right: 10%;
 }
 
 .nav-links ul li {
@@ -95,14 +96,26 @@ header {
   font-size: 30px;
   font-weight: bold;
 }
+.text-area h2 {
+  text-transform: uppercase;
+}
+.text-area button {
+  margin-top: 4rem;
+  padding: 1rem;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 8px 8px;
+  width: 12rem;
+}
 
-.introduction-div {
+#about {
   display: flex;
   padding: 80px 20px;
   background-color: var(--grayish-violet);
 }
 
-.introduction {
+.introduction-div {
   width: 40%;
   padding: 10px;
 }
@@ -111,23 +124,37 @@ header {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-
+.experiences {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 .experience {
-  width: 30%
+  width: 47%;
+}
+.job-role {
+  font-style: italic;
+  font-size: 14px;
+  margin: 3px 0px;
+}
+
+.experience small {
+  font-weight: 600;
 }
 
 .experience h4 {
-  margin: 10px 0 10px 0;
-  color: var(--blue)
+  margin: 6px 0 6px 0;
+  color: var(--blue);
 }
 
 .services {
-  margin: 40px 70px;
+  margin: 40px 70px 40pxc;
   align-items: center;
 }
 
 .services-writing {
-  padding: 70px 120px;
+  padding: 70px 120px 0;
   text-align: center;
   font-size: 18px;
 }
@@ -139,22 +166,20 @@ header {
 }
 
 .boxes {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem;
 }
 
-.box1,
-.box2,
-.box3 {
+.box {
   padding: 30px;
-  width: 50%;
+  width: 100%;
   border: 1px solid var(--gray);
-  margin: 20px
 }
 
-.box1 h3,
-.box2 h3,
-.box3 h3 {
-  margin: 25px 0px;
+.box h3 {
+  margin: 10px 0px;
   font-size: 25px;
 }
 
@@ -165,7 +190,8 @@ header {
 
 .skills img {
   width: 600px;
-  height: 700px
+  height: 700px;
+  object-fit: cover;
 }
 
 .skills-and-tools {
@@ -187,194 +213,52 @@ header {
   font-size: 25px;
 }
 
-.icons ul {
+.tools {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.icons ul li {
-  margin-right: 50px;
+.projects-comp {
+  margin: 10rem 2rem;
+}
+.projects-comp h2 {
+  text-align: center;
+  margin: 1rem 0 2rem;
 }
 
 .projects {
-  margin: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
 }
-
-.projects h1 {
-  margin-bottom: 40px;
-  align-self: center;
-  text-align: center;
-}
-
-.joblist,
-.url,
-.weight,
-.tracker,
-.comment {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
-
-.joblist p,
-.url p,
-.weight p,
-.tracker p,
-.comment p {
-  margin-bottom: 30px;
-  margin-top: 30px;
-  font-size: 20px;
-}
-
-.joblist img,
-.url img,
-.tracker img,
-.comment img {
-  max-width: 80%;
-  transition: .2s;
-  overflow: hidden;
-}
-
-.project-img-div {
-  overflow: hidden;
-}
-
-.weight {
-  margin-right: 400px;
-}
-
-.weight img {
-  height: 700px;
-  transition: .2s;
-}
-
-.joblist img:hover,
-.url img:hover,
-.weight img:hover,
-.tracker img:hover,
-.comment img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-  z-index: -1;
-}
-
-.weight button {
-  width: 35%;
-  text-align: center;
-  margin: 20px 0;
-  position: relative;
-  padding: 19px 36px;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  border-radius: 40px;
-  border: none;
-}
-
-.joblist button,
-.url button,
-.tracker button,
-.comment button {
-  margin: 20px 0;
-  width: 20%;
-  position: relative;
-  padding: 19px 36px;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  border-radius: 40px;
-  border: none;
-}
-
-.joblist button span,
-.url button span,
-.weight button span,
-.tracker button span,
-.comment button span {
-  position: relative;
-  color: #fff;
-  font-family: Arial;
-  letter-spacing: 8px;
-  z-index: 1;
-}
-
-.joblist button .liquid,
-.url button .liquid,
-.weight button .liquid,
-.tracker button .liquid,
-.comment button .liquid {
-  position: absolute;
-  top: -80px;
-  left: 0;
+.project {
   width: 100%;
-  height: 200px;
-  background: #4973ff;
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
-  transition: .5s;
+  height: 30rem;
+}
+.project-img {
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
 }
 
-.joblist button .liquid::after,
-.joblist button .liquid::before,
-.url button .liquid::after,
-.url button .liquid::before,
-.weight button .liquid::after,
-.weight button .liquid::before,
-.tracker button .liquid::after,
-.tracker button .liquid::before,
-.comment button .liquid::after,
-.comment button .liquid::before {
-  content: '';
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-  background: #fff;
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.joblist button .liquid::before,
-.url button .liquid::before,
-.weight button .liquid::before,
-.tracker button .liquid::before,
-.comment button .liquid::before {
-  border-radius: 45%;
-  background: rgba(20, 20, 20, 1);
-  animation: animate 5s linear infinite;
+.project a {
+  display: block;
+  color: #000000;
+  width: 100%;
+  margin-top: 0.85rem;
+  text-align: center;
 }
 
-.joblist button .liquid::after,
-.url button .liquid::after,
-.weight button .liquid::after,
-.tracker button .liquid::after,
-.comment button .liquid::after {
-  border-radius: 40%;
-  background: rgba(20, 20, 20, .5);
-  animation: animate 10s linear infinite;
-}
-
-.joblist button:hover .liquid,
-.url button:hover .liquid,
-.weight button:hover .liquid,
-.tracker button:hover .liquid,
-.comment button:hover .liquid {
-  top: -120px;
-  cursor: pointer;
-}
-
-@keyframes animate {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
-  }
-
-  100% {
-    transform: translate(-50%, -75%) rotate(360deg);
-  }
+.project a:hover {
+  text-decoration: underline;
 }
 
 .contact {
@@ -386,12 +270,25 @@ header {
   text-decoration: underline;
 }
 
+.contact button {
+  background-color: #1e90ff;
+  color: #ffffff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.contact button:hover {
+  cursor: pointer;
+}
+
 .contact span:hover {
   color: var(--blue);
   cursor: pointer;
 }
 
-.footer-div {
+footer {
   background: #000000;
   color: var(--white);
   display: flex;
@@ -404,11 +301,8 @@ header {
   color: var(--white);
   list-style: none;
   display: flex;
-  margin-right: 50px;
-}
-
-.socials ul li {
-  margin-left: 25px;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .copyright {
@@ -426,10 +320,10 @@ header {
 .socials ul li:hover {
   cursor: pointer;
   background: var(--white);
-  color: var(--blue)
+  color: var(--blue);
 }
 
-@media (max-width:420px) {
+@media (max-width: 420px) {
   header {
     height: 700px;
   }
@@ -469,17 +363,21 @@ header {
     font-size: 15px;
   }
 
-
-  .introduction-div {
+  #about {
     flex-direction: column;
     align-items: center;
   }
 
-  .introduction {
+  .introduction-div {
     width: 100%;
     font-size: 18px;
   }
 
+  .experiences {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
   .experience {
     width: 100%;
   }
@@ -499,17 +397,7 @@ header {
   }
 
   .boxes {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .box1,
-  .box2,
-  .box3 {
-    padding: 30px;
-    width: 90%;
-    border: 1px solid var(--gray);
-    margin: 20px
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .skills {
@@ -539,11 +427,10 @@ header {
     margin-top: 30px;
   }
 
-  .icons ul {
+  .tools {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin-top: 30px;
+    gap: 1rem;
   }
 
   .icons ul li {
@@ -552,44 +439,10 @@ header {
   }
 
   .projects {
-    margin: 50px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .joblist img,
-  .url img,
-  .tracker img,
-  .comment img {
-    width: 100%;
-  }
-
-  .weight {
-    margin-left: 10px;
-    align-self: flex-start;
-  }
-
-  .weight img {
-    height: 400px
-  }
-
-  .joblist p,
-  .url p,
-  .weight p,
-  .tracker p,
-  .comment p {
-    font-size: 18px;
-  }
-
-  .joblist button,
-  .url button,
-  .tracker button,
-  .comment button {
-    width: 50%;
-    text-align: center;
-  }
-
-  .weight button {
-    text-align: center;
-    width: 60%;
-    margin-top: 30px;
+  .projects-comp {
+    margin: 10rem 0.7rem;
   }
 }
